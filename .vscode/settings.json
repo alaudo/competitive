@@ -1,5 +1,5 @@
 {
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
-    "python.pythonPath": "/Users/alexgalkin/anaconda3/bin/python"
+    "python.pythonPath": "D:\\Dev\\Python\\Python38-32\\python.exe"
 }

@@ -1,14 +1,14 @@
 # a = int(input())
 from math import sqrt
 
-# a = int(input())
+a = int(input())
 a = 10000
 b = a
 dividers = []
     
 
 while True:
-    for i in range(2,b+1):
+    for i in range(2,b+1):\
         if (b % i) == 0:
             if not(i in dividers):
                 dividers.append(int(i))
