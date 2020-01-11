@@ -1,26 +1,29 @@
-# a = int(input())
 from math import sqrt
 
-# a = int(input())
-a = 10000
-b = a
-dividers = []
-    
 
-while True:
-    for i in range(2,b+1):
-        if (b % i) == 0:
-            if not(i in dividers):
-                dividers.append(int(i))
-            b = b // i
-            break
-    if  b == 1:
-        break
+def allmultipule(a):
+    multipule = []
+    a = int(a)
+    for i in range(1,int(sqrt(a))+1):
+        i = int(i)
+        if a % i == 0:
+            multipule.append(i)
 
-allnums = list(range(a))
-for d in dividers:
-    allnums = list(filter(lambda x: x % d != 0, allnums))
+    for s in range(len(multipule)):
+        if a % multipule[s] == 0 and a // multipule[s] != multipule[s]:
+            multipule.append(a//multipule[s])
+    return sorted(multipule)
 
-print(len(allnums))
+def GCD(a,b):
+    a = allmultipule(a)
+    print(a)
+    b = allmultipule(b)
+    print(b)
+    c = set(a).intersection(b)
+    return max(c)
 
-        
+def lcm(a,b):
+        return a * b // GCD(a,b)
+
+print(GCD(15,24))
+print(lcm(24,15))
