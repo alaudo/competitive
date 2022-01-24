@@ -1,5 +1,17 @@
 from abc import ABC, abstractmethod
 
+class Putin:
+    def init(self,num,changes):
+        self.number = num
+        self.changes = changes
+    
+    def digit(self):
+        self.numbers_visualized = Digit(self.number)
+        return self.numbers_visualized.get_visual()
+
+    def number(self):
+        self.numbers_visualized = Number(self.number)
+        return self.numbers_visualized.get_visual()        
 
 class Digit:
     numbers_visual = {"0": "1111110", "1": "0110000", "2": "1101101", "3": "1111001", "4": "0110011", "5": "1011011", "6": "1011111",
@@ -145,8 +157,7 @@ for x in all_num:
 for row in whole:
     print(row)
 '''
-c = Strokes("1", "2")
-print(c.compare())
+c = Putin("D24",3)
 '''
 c = Number("5345")
 a = list(c.visualize())
