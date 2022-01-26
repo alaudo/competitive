@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 
 class Putin:
-    def init(self,num,changes):
+    def __init__(self,num,changes):
         self.number = num
         self.changes = changes
     
@@ -158,6 +158,7 @@ for row in whole:
     print(row)
 '''
 c = Putin("D24",3)
+print(c.number())
 '''
 c = Number("5345")
 a = list(c.visualize())
